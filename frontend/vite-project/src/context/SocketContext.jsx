@@ -1,6 +1,6 @@
-import { createContext, useState, useEffect, useContext } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import { io } from "socket.io-client";
 import { useAuthContext } from "./AuthContext";
-import {io} from "socket.io-client";
 
 const SocketContext = createContext();
 
@@ -15,7 +15,7 @@ export const SocketContextProvider = ({ children }) => {
 
 	useEffect(() => {
 		if (authUser) {
-			const socket = io("http://localhost:5000", {
+			const socket = io("https://mern-stack-chat-application-1.onrender.com", {
 				query: {
 					userId: authUser._id,
 				},
