@@ -2,15 +2,16 @@
   "name": "frontend",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "dev": "vite",
-
     "test": "echo \"Error: no test specified\" && exit 1"
-    
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "chatapplication-mern": "file:..",
+    "vite-project": "^1.0.2"
+  }
 }
